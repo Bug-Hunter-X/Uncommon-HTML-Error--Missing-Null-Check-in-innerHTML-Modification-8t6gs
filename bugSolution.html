@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    const divElement = document.getElementById("myDiv");
+    // Correctly modifying innerHTML with a null check
+    if (divElement) {
+      divElement.innerHTML += "<p>This text is visible now.</p>";
+    } else {
+      console.error("Element with id 'myDiv' not found.");
+    }
+  </script>
+</body>
+</html>
